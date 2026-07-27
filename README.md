@@ -12,7 +12,7 @@ This project demonstrates AWS Identity and Access Management (IAM) security best
 
 ## Architecture
 
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](aws-iam-security-lab.drawio.png)
 
 ## Implementation
 
