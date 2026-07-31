@@ -1,3 +1,5 @@
+</> Markdown
+
 # AWS IAM Security Lab
 
 ## Project Overview
@@ -7,7 +9,7 @@ This project demonstrates AWS Identity and Access Management (IAM) security best
 ## AWS Services Used
 
 - AWS IAM
-- Amazon EC2
+  
 - Amazon S3
 
 ## Architecture
@@ -16,43 +18,99 @@ This project demonstrates AWS Identity and Access Management (IAM) security best
 
 ## Implementation
 
-### IAM Users Created
+## Project Objectives
 
-- admin-user
-- dev-user1
-- dev-user2
-- auditor-user
+- Create IAM users
+- Create IAM groups
+- Create a custom IAM policy
+- Assign users to groups
+- Test user permissions
+- Apply the principle of least privilege
 
-### Groups Created
+---
 
-- Administrators
-- Developers
-- Auditors
+## Project Scenario
 
-## Security Controls Implemented
+A company wants developers to access only a specific Amazon S3 bucket. Rather than granting AdministratorAccess, a custom IAM policy is created and attached to the Developers group. Any user added to the group automatically receives the required permissions.
 
-- User groups for permission management
-- Custom IAM policy for developers
-- Least privilege permissions
-- MFA enabled for administrative access
-- IAM role for EC2 to access S3 securely
+---
 
-## Testing
+# Step 1 – Create an IAM Group
 
-### Developer Permissions
+Created a Developers IAM group to manage permissions centrally.
 
-Allowed:
-- View EC2 resources
-- Start/stop EC2 instances
-- Read S3 objects
 
-Denied:
-- Create S3 buckets
-- Access IAM users
 
-## Key Learnings
 
-- Difference between IAM users and roles
-- How policies control AWS permissions
-- Importance of least privilege access
-- Why IAM roles are preferred over access keys
+
+
+---
+
+---
+
+# Step 2 – Create IAM Users
+
+Created two IAM users:
+
+- Dev-User1
+- Dev-User2
+
+Both users were added to the Developers group so they inherit the assigned permissions.
+
+**Screenshot**
+
+---
+
+# Step 3 – Create a Custom IAM Policy
+
+A custom IAM policy was created to allow developers to list the S3 bucket and access objects while restricting unnecessary permissions.
+
+**Screenshot**
+
+---
+
+# Step 4 – Attach the Policy to the Developers Group
+
+The custom policy was attached to the Developers group instead of individual users. This follows AWS best practices by managing permissions through groups.
+
+**Screenshot**
+
+---
+
+# Step 5 – Test User Permissions
+
+Logged in as **Dev-User1** and verified that:
+
+- Access to the approved S3 bucket was successful.
+- Unauthorized actions were denied.
+- The least privilege model was successfully enforced.
+
+**Screenshot**
+
+---
+
+# Results
+
+✅ Successfully created IAM users and groups.
+
+✅ Successfully created and attached a custom IAM policy.
+
+✅ Successfully verified least-privilege access using an IAM user.
+
+---
+
+# Skills Demonstrated
+
+- AWS IAM
+- Identity and Access Management
+- IAM Policies
+- IAM Groups
+- Principle of Least Privilege
+- Amazon S3 Permissions
+- AWS Security Best Practices
+
+---
+
+# Lessons Learned
+
+This project reinforced AWS IAM best practices, including managing permissions through groups, creating custom IAM policies, and applying the Principle of Least Privilege to improve cloud security.
