@@ -39,12 +39,7 @@ A company wants developers to access only a specific Amazon S3 bucket. Rather th
 
 Created a Developers IAM group to manage permissions centrally.
 
-
-
-
-
-
----
+![IAM Group Created](IMG_9758.jpeg)
 
 ---
 
