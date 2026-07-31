@@ -74,13 +74,15 @@ The custom policy was attached to the Developers group instead of individual use
 
 # Step 5 – Test User Permissions
 
-Logged in as **Dev-User1** and verified that:
+Logged in as **Dev-User1** and verified that the custom IAM policy was working correctly.
+
+Validation included:
 
 - Access to the approved S3 bucket was successful.
-- Unauthorized actions were denied.
-- The least privilege model was successfully enforced.
+- Unauthorized IAM actions were denied.
+- Attempting to list IAM users returned an **Access Denied** error, confirming that the principle of least priviledge was successfully enforced.
 
-**Screenshot**
+![Access Denied - Least Priviledge Verification](IMG_9754.jpeg)
 
 ---
 
